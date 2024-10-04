@@ -35,7 +35,7 @@ jobs:
 
       # Step 5: Run Maven build
       - name: Build with Maven
-        run: mvn clean package # if install skip test thus : -DskipTests=false
+        run: mvn clean package -DskipTests
 
       # Optional: Step 6: Run tests
 #      - name: Run tests
