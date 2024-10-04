@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+#  pull_request:
+#    branches:
+#      - main
 
 jobs:
   build:
@@ -23,13 +23,6 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
-
-      # Step 3: Set up Maven (optional step if you want to ensure a specific Maven version)
-      - name: Set up Maven
-        uses: actions/setup-java@v2
-        with:
-          distribution: 'maven'
-          maven-version: '3.8.6' # You can specify the version you need
 
       # Step 4: Cache Maven dependencies
       - name: Cache Maven packages
